@@ -7,21 +7,14 @@ const eqArrays = function(firstArray, secondArray) {
 };
     
 const checker = function(firstVar, secondVar) {
-  if (firstVar === secondVar) {
-    return true;
-  } else {
-    return false;
-  }
+  return (firstVar === secondVar) 
 };
     
 const assertEqual = function(firstArray, secondArray, expected) {
-  let message = '';
   if (eqArrays(firstArray, secondArray) === expected) {
-    message = `👍 Assertion Passed: [${eqArrays(firstArray, secondArray)}] === [${expected}]`;
-    console.log(message);
+    console.log(`👍 Assertion Passed: [${eqArrays(firstArray, secondArray)}] === [${expected}]`)
   } else {
-    message = `👎 Assertion Failed: [${eqArrays(firstArray, secondArray)}] !== [${expected}]`;
-    console.log(message);
+    console.log(`👎 Assertion Failed: [${eqArrays(firstArray, secondArray)}] !== [${expected}]`);
   }
 };
 
@@ -42,3 +35,6 @@ without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
 
 assertEqual(without(["1", "2", "3"], [1, 2, "3"]),["1", "2"], true);
 assertEqual((without([1, 2, 3], [1])),[2, 3], true);
+
+// research reduce function and map 
+// look in to asycronous order
