@@ -14,11 +14,6 @@ function checker(firstVar, secondVar) {
     }
 }
 
-/* Ternary operators
-You may be asking yourself: so what's up with the ?s and :s anyway?
-output === "" ? num : output is using JavaScript's ternary operator. Check out the MDN docs to learn more about it. */
-
-
 const assertEqual = function(actual, expected) {
     let message = '';
     if (actual === expected) {
