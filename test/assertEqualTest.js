@@ -1,6 +1,7 @@
 const assertEqual = require('../assertEqual')
 const head = require('../head')
 const tail = require('../tail')
+const eqArrays = require('../eqArrays')
 
 
 // Testing Assert Equal
@@ -24,4 +25,13 @@ assertEqual(result[1], "Labs"); // ensure second element is "Labs"
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 tail(words); 
 assertEqual(words.length, 3);
-    
+
+// Testing eqArrays
+
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);  
+  
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);  
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);  
+  
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
